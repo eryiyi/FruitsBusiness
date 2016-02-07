@@ -16,6 +16,8 @@ import com.lbins.FruitsBusiness.MainActivity;
 import com.lbins.FruitsBusiness.R;
 import com.lbins.FruitsBusiness.SecondApplication;
 import com.lbins.FruitsBusiness.bean.BaseActivity;
+import com.lbins.FruitsBusiness.http.HttpClientUtils;
+import com.lbins.FruitsBusiness.servieid.ServerId;
 import com.lbins.FruitsBusiness.util.StringUtil;
 import org.apache.http.params.HttpParams;
 import org.json.JSONException;
@@ -48,7 +50,7 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
             // 3秒后跳转到登录界面
             Thread.sleep(3000);
             if(!StringUtil.isNullOrEmpty(getGson().fromJson(getSp().getString("password", ""), String.class)) && !StringUtil.isNullOrEmpty(getGson().fromJson(getSp().getString("mobile", ""), String.class))){
-                login(getGson().fromJson(getSp().getString("mobile", ""), String.class), getGson().fromJson(getSp().getString("password", ""), String.class));
+
             }else {
 //                if(!StringUtil.isNullOrEmpty(getGson().fromJson(getSp().getString("city", ""), String.class))){
 //                   //如果选择了
@@ -65,70 +67,6 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
             e.printStackTrace();
         }
     }
-    JSONObject object;
-    void login(String mobile, String pwr){
-        HttpParams params = new HttpParams();
-        params.put("mobile", mobile);
-        params.put("password", pwr);
-        HttpClientUtils.getInstance().post(ServerId.serveradress, ServerId.logonurl, params, new AsyncHttpResponseHandler(){
-            @Override
-            public void onSuccess(JSONObject jsonObject) {
-                try {
-                    object = jsonObject.getJSONObject("data");
-                    com.example.secondapp.bean.Response.code = jsonObject.getInt("code");
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }finally{
-                    Message message = new Message();
-                    message.what = 123;
-                    handler.sendMessage(message);
-                }
-            }
-        });
-    }
-
-    Handler handler = new Handler(new Handler.Callback() {
-
-        @Override
-        public boolean handleMessage(Message msg) {
-            switch (msg.what) {
-                case 123:
-                    if(com.example.secondapp.bean.Response.code == 200 && object != null){
-                        if(object != null){
-                            //-------保存登陆的信息-------
-                            save("uid", object.optInt("uid"));
-                            try {
-                                save("user_name", object.getString("user_name"));
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                            try {
-                                save("mobile", object.getString("mobile"));
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                            save("is_login", "1");
-                            Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-                            startActivity(intent);
-                            finish();
-                        }else {
-                            Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-                            startActivity(intent);
-                            finish();
-                        }
-                    }else{
-                        //
-                        Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                    break;
-                default:
-                    break;
-            }
-            return true;
-        }
-    });
 
 
     /**
@@ -198,4 +136,5 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
     public void onResume() {
         super.onResume();
     }
+
 }

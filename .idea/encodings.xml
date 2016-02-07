@@ -6,13 +6,21 @@
     <file url="file://$PROJECT_DIR$/libs/httpmime-4.3.5.jar" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/libs/universal-image-loader-1.9.2.jar" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/libs/volley.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-hdpi/goods_add.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-hdpi/goods_jian.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/layout/item_main_viewpage_xml.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/res/layout/welcome.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/res/values/attrs.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/SecondApplication.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/adapter/AnimateFirstDisplayListener.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/adapter/OnClickContentItemListener.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/adapter/ViewPagerAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/adapter/ViewPagerAdapter.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/bean/ActivityTack.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/bean/BaseActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/bean/BaseFragment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/bean/MyBaseFragment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/data/AdSlide.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/ui/WelcomeActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/upload/CommonUtil.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/upload/MultiPartRequest.java" charset="UTF-8" />
@@ -21,5 +29,7 @@
     <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/util/CompressPhotoUtil.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/util/RelativeDateFormat.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/util/StringUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/view/CircleImageView.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/lbins/FruitsBusiness/view/ReboundScrollView.java" charset="UTF-8" />
   </component>
 </project>
