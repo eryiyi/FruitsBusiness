@@ -140,12 +140,12 @@ public class PersonalcenterFragment extends BaseFragment implements OnClickListe
 		}else{
 			number4.setText(myorder4 + "");
 		}
-		if ("1".equals(getGson().fromJson(getSp().getString("is_login", ""), String.class))) {
+//		if ("1".equals(getGson().fromJson(getSp().getString("is_login", ""), String.class))) {
 			personalcenter.setVisibility(View.GONE);
 			personalcenter2.setVisibility(View.VISIBLE);
 			statusbar.setVisibility(View.VISIBLE);
 			username.setText(getGson().fromJson(getSp().getString("user_name", ""), String.class));
-		}
+//		}
 
 //		String	path = SharedPrefsUtil.getValue(getActivity(), "imagepath", null);
 //		if (path != null) {
@@ -201,25 +201,25 @@ public class PersonalcenterFragment extends BaseFragment implements OnClickListe
 //			startActivity(intent1);
 			break;
 		case R.id.personalshoppingcart:
-			if ("0".equals(getGson().fromJson(getSp().getString("is_login", ""), String.class))) {
-				Toast.makeText(getActivity(), "请登录后查看购物车", Toast.LENGTH_SHORT).show();
-				Intent intent2 = new Intent(getActivity(), Logon.class);
-				intent2.putExtra("nozero", 2);
-				startActivity(intent2);
-			}else{
-//				Intent intent2 = new Intent(getActivity(), ShoppingCartList.class);
+//			if ("0".equals(getGson().fromJson(getSp().getString("is_login", ""), String.class))) {
+//				Toast.makeText(getActivity(), "请登录后查看购物车", Toast.LENGTH_SHORT).show();
+//				Intent intent2 = new Intent(getActivity(), Logon.class);
+//				intent2.putExtra("nozero", 2);
 //				startActivity(intent2);
-			}
+//			}else{
+////				Intent intent2 = new Intent(getActivity(), ShoppingCartList.class);
+////				startActivity(intent2);
+//			}
 			break;
 		case R.id.collection:
-			if ("0".equals(getGson().fromJson(getSp().getString("is_login", ""), String.class))) {
-				Intent nouser = new Intent(getActivity(), Logon.class);
-				nouser.putExtra("nozero", 4);
-				startActivity(nouser);
-			}else{
-//				Intent intent3 = new Intent(getActivity(), MyCollection.class);
-//				startActivity(intent3);
-			}
+//			if ("0".equals(getGson().fromJson(getSp().getString("is_login", ""), String.class))) {
+//				Intent nouser = new Intent(getActivity(), Logon.class);
+//				nouser.putExtra("nozero", 4);
+//				startActivity(nouser);
+//			}else{
+////				Intent intent3 = new Intent(getActivity(), MyCollection.class);
+////				startActivity(intent3);
+//			}
 			break;
 		case R.id.personalsetting:
 //			Intent intent4 = new Intent(getActivity(), Setting.class);
@@ -227,14 +227,14 @@ public class PersonalcenterFragment extends BaseFragment implements OnClickListe
 //			startActivity(intent4);
 			break;
 		case R.id.personalorder:
-			if ("0".equals(getGson().fromJson(getSp().getString("is_login", ""), String.class))) {
-				Intent nouser = new Intent(getActivity(), Logon.class);
-				nouser.putExtra("nozero", 3);
-				startActivity(nouser);
-			}else{
-//				Intent intent5 = new Intent(getActivity(), MyOrder.class);
-//				startActivity(intent5);
-			}
+//			if ("0".equals(getGson().fromJson(getSp().getString("is_login", ""), String.class))) {
+//				Intent nouser = new Intent(getActivity(), Logon.class);
+//				nouser.putExtra("nozero", 3);
+//				startActivity(nouser);
+//			}else{
+////				Intent intent5 = new Intent(getActivity(), MyOrder.class);
+////				startActivity(intent5);
+//			}
 			break;
 //		case R.id.personalhelpandfeddback:
 //			Intent intent6 = new Intent(getActivity(), HelpAndFeedback.class);
@@ -271,12 +271,12 @@ public class PersonalcenterFragment extends BaseFragment implements OnClickListe
 	}
 	@Override
 	public void onResume() {
-		if ("1".equals(getGson().fromJson(getSp().getString("is_login", ""), String.class))) {
-			personalcenter.setVisibility(View.GONE);
-			personalcenter2.setVisibility(View.VISIBLE);
-			statusbar.setVisibility(View.VISIBLE);
-			username.setText(getGson().fromJson(getSp().getString("user_name", ""), String.class));
-		}
+//		if ("1".equals(getGson().fromJson(getSp().getString("is_login", ""), String.class))) {
+//			personalcenter.setVisibility(View.GONE);
+//			personalcenter2.setVisibility(View.VISIBLE);
+//			statusbar.setVisibility(View.VISIBLE);
+//			username.setText(getGson().fromJson(getSp().getString("user_name", ""), String.class));
+//		}
 		myorder1 = SharedPrefsUtil.getValue(getActivity(), "mo1", 0);
 		if (myorder1 == 0) {
 			frame1.setVisibility(View.GONE);

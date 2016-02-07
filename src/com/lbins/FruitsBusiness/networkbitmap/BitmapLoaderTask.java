@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.widget.ImageView;
-import com.example.secondapp.http.Logg;
+import com.lbins.FruitsBusiness.http.Logg;
 
 import java.io.File;
 import java.io.FileInputStream;

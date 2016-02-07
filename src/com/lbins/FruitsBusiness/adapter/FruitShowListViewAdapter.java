@@ -61,6 +61,7 @@ public class FruitShowListViewAdapter extends BaseAdapter{
 			holder.compri = (TextView) convertView.findViewById(R.id.comprice);
 			holder.comsuppri = (TextView) convertView.findViewById(R.id.comsuppri);
 			holder.addshopcart = (TextView) convertView.findViewById(R.id.purchasequantity);
+			holder.numbner = (TextView) convertView.findViewById(R.id.numbner);
 			convertView.setTag(holder);
 		}else{
 			holder = (Holder) convertView.getTag();
@@ -77,6 +78,12 @@ public class FruitShowListViewAdapter extends BaseAdapter{
 				numcount = "0";
 			}
 			holder.addshopcart.setText(numcount);
+
+			String numcount1 =(list.get(position).getIs_num()==null?"0":list.get(position).getIs_num());
+			if("".equals(numcount1)){
+				numcount1 = "0";
+			}
+			holder.numbner.setText("库存量"+numcount1);
 		}
 		return convertView;
 	}
@@ -90,6 +97,7 @@ public class FruitShowListViewAdapter extends BaseAdapter{
 	class Holder{
 		ImageView compic;
 		TextView comdescribe;
+		TextView numbner;
 		TextView compri;
 		TextView comsuppri;
 		TextView addshopcart;

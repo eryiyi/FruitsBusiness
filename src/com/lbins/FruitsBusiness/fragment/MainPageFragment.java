@@ -15,6 +15,7 @@ import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
 
 import com.lbins.FruitsBusiness.R;
+import com.lbins.FruitsBusiness.SecondApplication;
 import com.lbins.FruitsBusiness.adapter.FruitShowListViewAdapter;
 import com.lbins.FruitsBusiness.adapter.OnClickContentItemListener;
 import com.lbins.FruitsBusiness.adapter.ViewPagerAdapter;
@@ -145,7 +146,7 @@ public class MainPageFragment extends BaseFragment implements PullToRefreshView.
 	
 	public void getListViewData(){
 		HttpParams params = new HttpParams();
-		params.put("user_name", getGson().fromJson(getSp().getString("user_name", ""), String.class) );
+		params.put("user_name", SecondApplication.user_name);
 		HttpClientUtils.getInstance().post(ServerId.serveradress, ServerId.lastproduct, params, new AsyncHttpResponseHandler(){
 			@Override
 			public void onSuccess(JSONObject s) {

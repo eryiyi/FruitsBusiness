@@ -4,6 +4,32 @@ package com.lbins.FruitsBusiness.bean;
 import java.io.Serializable;
 import java.util.List;
 
+
+//"delivery_type": "3",
+//		"product_pic1": "/Uploads/2015-12-05/5662291836622.jpg",
+//		"shop_id": "12",
+//		"product_id": "30",
+//		"product_name": "白菜",
+//		"is_open": "1",
+//		"is_discount": null,
+//		"is_tuangou": null,
+//		"dateline": "2015-12-07 18:32:27",
+//		"buy_numbers": "248",
+//		"community_id": "0",
+//		"product_audit": "1",
+//		"product_pic2": "/Uploads/2015-12-05/5662291837148.jpg",
+//		"type_id": "1",
+//		"discount": "绿色无污染",
+//		"info": "<p><span style=\"color: rgb(204, 0, 0); font-family: arial; font-size: 13px; line-height: 20.02px; background-color: rgb(255, 255, 255);\">胡萝卜</span><span style=\"color: rgb(51, 51, 51); font-family: arial; font-size: 13px; line-height: 20.02px; background-color: rgb(255, 255, 255);\">，别名</span><span style=\"color: rgb(204, 0, 0); font-family: arial; font-size: 13px; line-height: 20.02px; background-color: rgb(255, 255, 255);\">红萝卜</span><span style=\"color: rgb(51, 51, 51); font-family: arial; font-size: 13px; line-height: 20.02px; background-color: rgb(255, 255, 255);\">、丁香萝卜、葫芦菔金，又被称为胡芦菔、红菜头、黄萝卜等，有地下“小人参”之称，是伞形二年生草本植物，以呈肉质的根作为蔬菜来食用。</span><span style=\"color: rgb(204, 0, 0); font-family: arial; font-size: 13px; line-height: 20.02px; background-color: rgb(255, 255, 255);\">胡萝卜</span><span style=\"color: rgb(51, 51, 51); font-family: arial; font-size: 13px; line-height: 20.02px; background-color: rgb(255, 255, 255);\">每100克鲜重含1.67～12.1毫克</span><span style=\"color: rgb(204, 0, 0); font-family: arial; font-size: 13px; line-height: 20.02px; background-color: rgb(255, 255, 255);\">胡萝卜</span><span style=\"color: rgb(51, 51, 51); font-family: arial; font-size: 13px; line-height: 20.02px; background-color: rgb(255, 255, 255);\">素，含量高于番茄的5～7倍，食用后经肠</span></p>",
+//		"product_pic3": null,
+//		"is_num": "738",
+//		"price_tuangou": "1.80",
+//		"unit": "市斤",
+//		"product_pic": "/Uploads/2015-12-05/566229183544a.jpg",
+//		"price": "2.00",
+//		"pay_type": null,
+//		"tuangou_numbers": null
+
 public class FruitBean implements Serializable{
 	private static final long serialVersionUID = 1L;
 	public int product_id;

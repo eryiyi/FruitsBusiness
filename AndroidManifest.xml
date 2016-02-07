@@ -25,7 +25,7 @@
                  android:icon="@drawable/demosmall4"
                  android:theme="@android:style/Theme.NoTitleBar"
                 >
-        <activity android:name="MainActivity"
+        <activity android:name=".ui.WelcomeActivity"
                   android:screenOrientation="portrait"
                   android:windowSoftInputMode="adjustResize"
                   android:label="@string/app_name">
@@ -34,6 +34,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.lbins.FruitsBusiness.city.CityList" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.Logon" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".MainActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+
 
         <receiver
                 android:name="com.lbins.FruitsBusiness.resevicer.NetCheckReceiver"

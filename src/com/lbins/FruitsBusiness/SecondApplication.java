@@ -44,6 +44,7 @@ public class SecondApplication extends Application {
     public static Double lon;
     public static String cityName;
     public static String desc;
+    public static String user_name;
 
     @Override
     public void onCreate() {

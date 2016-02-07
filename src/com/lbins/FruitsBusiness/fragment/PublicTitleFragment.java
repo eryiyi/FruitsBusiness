@@ -45,12 +45,6 @@ public class PublicTitleFragment extends BaseFragment {
 		case BottomFragment.MAINPAGE:
 			title.setText(R.string.sellfruit);
 			break;
-//		case BottomFragment.RECOMMEND:
-//			title.setText(R.string.recommend);
-//			break;
-//		case BottomFragment.CLASSIFICATION:
-//			title.setText(R.string.classification);
-//			break;
 		case BottomFragment.PERSONALCENTER:
 			magnifer.setVisibility(View.GONE);
 			shoppingcart.setVisibility(View.GONE);

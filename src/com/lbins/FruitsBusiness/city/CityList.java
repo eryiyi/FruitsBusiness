@@ -17,9 +17,9 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.example.secondapp.R;
-import com.example.secondapp.base.BaseActivity;
-import com.example.secondapp.db.DBManager;
+import com.lbins.FruitsBusiness.R;
+import com.lbins.FruitsBusiness.bean.BaseActivity;
+import com.lbins.FruitsBusiness.db.DBManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;

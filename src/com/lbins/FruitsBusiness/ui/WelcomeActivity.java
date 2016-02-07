@@ -49,20 +49,24 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
         try {
             // 3秒后跳转到登录界面
             Thread.sleep(3000);
-            if(!StringUtil.isNullOrEmpty(getGson().fromJson(getSp().getString("password", ""), String.class)) && !StringUtil.isNullOrEmpty(getGson().fromJson(getSp().getString("mobile", ""), String.class))){
-
-            }else {
-//                if(!StringUtil.isNullOrEmpty(getGson().fromJson(getSp().getString("city", ""), String.class))){
-//                   //如果选择了
-                    Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-//                }else{
-//                    Intent intent = new Intent(WelcomeActivity.this, CityList.class);
+//            if(!StringUtil.isNullOrEmpty(getGson().fromJson(getSp().getString("password", ""), String.class)) && !StringUtil.isNullOrEmpty(getGson().fromJson(getSp().getString("mobile", ""), String.class))){
+//
+//            }else {
+////                if(!StringUtil.isNullOrEmpty(getGson().fromJson(getSp().getString("city", ""), String.class))){
+////                   //如果选择了
+//                    Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
 //                    startActivity(intent);
 //                    finish();
-//                }
-            }
+////                }else{
+////                    Intent intent = new Intent(WelcomeActivity.this, CityList.class);
+////                    startActivity(intent);
+////                    finish();
+////                }
+//            }
+
+            Intent intent = new Intent(WelcomeActivity.this, Logon.class);
+            startActivity(intent);
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

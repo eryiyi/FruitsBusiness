@@ -8,7 +8,6 @@ import android.graphics.BitmapFactory.Options;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Base64;
-import com.example.secondapp.networkbitmap.BitmapDownloader.AnimateAppearance;
 
 import java.io.*;
 
@@ -35,7 +34,7 @@ public class BitmapUtil {
 			//mBitmapDownload.setErrorDrawable(errorDrawable);
 			//设置下载中状态下的图片
 			//mBitmapDownload.setInProgressDrawable(downloadingDrawable);
-			mBitmapDownload.setAnimateImageAppearance(AnimateAppearance.ANIMATE_NEVER);
+			mBitmapDownload.setAnimateImageAppearance(BitmapDownloader.AnimateAppearance.ANIMATE_NEVER);
 			createCachePath(SystemBase.IMAGE_CACHE_PATH);
 			setCachePath(SystemBase.IMAGE_CACHE_PATH);
 		}
@@ -56,7 +55,7 @@ public class BitmapUtil {
 			mBitmapDownload.setErrorDrawable(errorDrawable);
 			//设置下载中状态下的图片
 			mBitmapDownload.setInProgressDrawable(downloadingDrawable);
-			mBitmapDownload.setAnimateImageAppearance(AnimateAppearance.ANIMATE_NEVER);
+			mBitmapDownload.setAnimateImageAppearance(BitmapDownloader.AnimateAppearance.ANIMATE_NEVER);
 			createCachePath(SystemBase.IMAGE_CACHE_PATH);
 			setCachePath(SystemBase.IMAGE_CACHE_PATH);
 		}

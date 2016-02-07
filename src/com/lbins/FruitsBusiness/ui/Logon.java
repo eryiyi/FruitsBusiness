@@ -12,7 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lbins.FruitsBusiness.MainActivity;
 import com.lbins.FruitsBusiness.R;
+import com.lbins.FruitsBusiness.SecondApplication;
 import com.lbins.FruitsBusiness.bean.BaseActivity;
 import com.lbins.FruitsBusiness.bean.FruitBean;
 import com.lbins.FruitsBusiness.bean.Response;
@@ -95,7 +97,7 @@ public class Logon extends BaseActivity implements OnClickListener{
 			@Override
 			public void onSuccess(JSONObject jsonObject) {
 				try {
-					object = jsonObject.getJSONObject("data");
+//					object = jsonObject.getJSONObject("data");
 					Response.code = jsonObject.getInt("code");
 				} catch (JSONException e) {
 					e.printStackTrace();
@@ -114,24 +116,14 @@ public class Logon extends BaseActivity implements OnClickListener{
 		public boolean handleMessage(Message msg) {
 			switch (msg.what) {
 			case 123:
-				if(Response.code == 200 && object != null){
-					Toast.makeText(Logon.this, "登录成功", Toast.LENGTH_SHORT).show();
-					if(object != null){
-						//-------保存登陆的信息-------
-						save("uid", object.optInt("uid"));
-						try {
-							save("user_name", object.getString("user_name"));
-						} catch (JSONException e) {
-							e.printStackTrace();
-						}
-						try {
-							save("mobile", object.getString("mobile"));
-						} catch (JSONException e) {
-							e.printStackTrace();
-						}
-						save("is_login", "1");
-						save("password", logonpsd.getText().toString().trim());
-					}
+				if(Response.code == 200 ){
+					save("mobile", logonusername.getText().toString());
+					save("user_name", logonusername.getText().toString());
+					save("is_login", "1");
+					save("password", logonpsd.getText().toString().trim());
+					SecondApplication.user_name = logonusername.getText().toString();
+					Intent mainV = new Intent(Logon.this , MainActivity.class);
+					startActivity(mainV);
 					finish();
 				}else{
 					Toast.makeText(Logon.this, "无法登录（用户名或密码不正确）", Toast.LENGTH_SHORT).show();

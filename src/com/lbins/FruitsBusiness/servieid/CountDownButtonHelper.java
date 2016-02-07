@@ -4,13 +4,12 @@ import android.content.Context;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.widget.Button;
-import com.example.secondapp.R;
+import com.lbins.FruitsBusiness.R;
 
 /**
  * 倒计时Button帮助类
  * 
  * @author zhaokaiqiang
- * @see http://blog.csdn.net/zhaokaiqiang1992
  */
 public class CountDownButtonHelper {
 
